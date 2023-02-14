@@ -10,7 +10,7 @@ class FzfDbtAT001 < Formula
   depends_on "jq"
 
   def install
-    system "ls"
+    system "mkdir -p ~/.fzf-dbt"
     system "cp src/fzf_dbt.sh ~/.fzf-dbt/fzf-dbt.sh"
     system "echo 'FZF_DBT_PATH=~/.fzf-dbt/fzf-dbt.sh' >> ~/.zshrc"
   end
