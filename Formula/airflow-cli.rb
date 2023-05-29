@@ -13,7 +13,7 @@ class Glab < Formula
       system "make", "install"
       bin.install ENV["GOPATH"] + "/bin/airflow-cli"
     else
-      bin.install File.exist?("bin/airflow-cli") ? "bin/airflow-cli" : "airflow-cli")
+      bin.install File.exist?("bin/airflow-cli") ? "bin/airflow-cli" : "airflow-cli"
     end
   end
 
