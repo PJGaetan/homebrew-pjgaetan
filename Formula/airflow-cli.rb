@@ -18,9 +18,8 @@ class AirflowCli < Formula
   end
 
   test do
-    system "git", "clone", "https://gitlab.com/cli-automated-testing/homebrew-testing.git"
-    cd "homebrew-testing" do
-      system "#{bin}/airflow-cli", "--version"
+    help_text = shell_output("#{bin}/airflow-cli help")
+    assert_includes help_text, "Airflow CLI"
     end
   end
 end
