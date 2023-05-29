@@ -1,4 +1,4 @@
-class Glab < Formula
+class AirflowCli < Formula
   desc "Open-source Airflow REST API command-line tool"
   homepage "https://github.com/PJGaetan/airflow-cli"
   url "https://github.com/PJGaetan/airflow-cli/archive/refs/tags/0.0.1.tar.gz"
