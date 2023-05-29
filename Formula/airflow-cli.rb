@@ -18,7 +18,7 @@ class AirflowCli < Formula
   end
 
   test do
-    help_text = shell_output("#{bin}/airflow-cli help")
+    help_text = shell_output("bin/airflow-cli help")
     assert_includes help_text, "Airflow CLI"
   end
 end
