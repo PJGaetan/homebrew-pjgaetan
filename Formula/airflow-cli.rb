@@ -4,9 +4,10 @@ class AirflowCli < Formula
   url "https://github.com/PJGaetan/airflow-cli/archive/refs/tags/0.0.1.tar.gz"
   sha256 "067f6429825463b32879fa704b57c5c490330807d96cd96d633d6d65a32977b0"
   license "MIT"
-  head "https://github.com/PJGaetan/airflow-cli.git", branch: "main"
-
-  depends_on "go" => :build
+  head do
+    url "https://github.com/PJGaetan/airflow-cli.git", branch: "main"
+    depends_on "go"
+  end
 
   def install
     if build.head?
