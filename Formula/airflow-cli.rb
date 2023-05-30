@@ -10,6 +10,7 @@ class AirflowCli < Formula
   end
 
   def install
+    system "./configure", *std_configure_args, "--disable-silent-rules"
     if build.head?
       system "make", "install"
       bin.install ENV["GOPATH"] + "/bin/airflow-cli"
@@ -19,7 +20,7 @@ class AirflowCli < Formula
   end
 
   test do
-    help_text = shell_output("bin/airflow-cli help")
+    help_text = shell_output("#{bin}/airflow-cli help")
     assert_includes help_text, "Airflow CLI"
   end
 end
