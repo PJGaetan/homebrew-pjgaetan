@@ -5,7 +5,7 @@ class AirflowCli < Formula
   sha256 "067f6429825463b32879fa704b57c5c490330807d96cd96d633d6d65a32977b0"
   license "MIT"
   head do
-    url "https://github.com/PJGaetan/airflow-cli.git", branch: "main"
+    url "https://github.com/PJGaetan/airflow-cli.git", branch: "master"
     depends_on "go"
   end
 
