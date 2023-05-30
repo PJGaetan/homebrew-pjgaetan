@@ -15,4 +15,3 @@ class AirflowCli < Formula
     assert_includes help_text, "Airflow CLI"
   end
 end
-
