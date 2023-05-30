@@ -10,7 +10,6 @@ class AirflowCli < Formula
   end
 
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
     if build.head?
       system "make", "install"
       bin.install ENV["GOPATH"] + "/bin/airflow-cli"
