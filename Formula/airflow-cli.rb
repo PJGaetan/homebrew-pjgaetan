@@ -9,9 +9,9 @@ class AirflowCli < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/PJGaetan/airflow-cli/releases/download/0.1.0/airflow-cli_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "3fe9a40af7a86e3d53e225eeca0695f375ef77cf0b0a2abfd40fe67ae0bcf5ea"
+    if Hardware::CPU.arm?
+      url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "b3c656808a8be9323f81f967f4eb7d7f01917039e700b59bf003c97886d386ca"
 
       def install
         if build.head?
@@ -22,9 +22,9 @@ class AirflowCli < Formula
         end
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/PJGaetan/airflow-cli/releases/download/0.1.0/airflow-cli_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "0e1de643f0736555f2420782af8e284817f52a16449233a7fa324102edacc160"
+    if Hardware::CPU.intel?
+      url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "9279dea7c1f9183daaf900e41ae4b15a921598b2ef1ddce2169458350815078b"
 
       def install
         if build.head?
@@ -39,8 +39,8 @@ class AirflowCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/PJGaetan/airflow-cli/releases/download/0.1.0/airflow-cli_0.1.0_Linux_armv6.tar.gz"
-      sha256 "13078af8b6281a5618efb0336d63eaccf7535ddb1b69cc955ca9764b758b1c13"
+      url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Linux_armv6.tar.gz"
+      sha256 "e158ee9a222e85245b4114ca575209216b97c1a7e927210c018ffa45500ecaef"
 
       def install
         if build.head?
@@ -52,8 +52,8 @@ class AirflowCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/PJGaetan/airflow-cli/releases/download/0.1.0/airflow-cli_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "e07ab3152d28cb12c08735b7a3338018b930422448b83a6e2db364dafbe71297"
+      url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "726feec84123ad7bee120e89b9bc3fcbdf0e545fa1d3850a68409e46cff5f47f"
 
       def install
         if build.head?
@@ -65,8 +65,8 @@ class AirflowCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PJGaetan/airflow-cli/releases/download/0.1.0/airflow-cli_0.1.0_Linux_arm64.tar.gz"
-      sha256 "288c1475f9b1a244920ff66b11d22f6bb496476a54fc15bc32a7a6880e9cab88"
+      url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Linux_arm64.tar.gz"
+      sha256 "9f2c3a59f064f1c59a09eb3bef770b20ddef659ccfdee4e2157b157d1a7153b3"
 
       def install
         if build.head?
