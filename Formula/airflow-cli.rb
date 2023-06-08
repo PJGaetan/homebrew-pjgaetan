@@ -11,7 +11,7 @@ class AirflowCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "b3c656808a8be9323f81f967f4eb7d7f01917039e700b59bf003c97886d386ca"
+      sha256 "794ed7f1dbac4de95d7e0fdbe91224336587824635db502c136d0445e5e4e4ad"
 
       def install
         if build.head?
@@ -24,7 +24,7 @@ class AirflowCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "9279dea7c1f9183daaf900e41ae4b15a921598b2ef1ddce2169458350815078b"
+      sha256 "f946753a127a9d4d3334ffa9242c7318c4003e73e3b8085f0f8deb2736d588cd"
 
       def install
         if build.head?
@@ -40,7 +40,7 @@ class AirflowCli < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Linux_armv6.tar.gz"
-      sha256 "e158ee9a222e85245b4114ca575209216b97c1a7e927210c018ffa45500ecaef"
+      sha256 "0729b19b1f9ec0d10b10052af9ad3a2fefb228167bdf617f8fb3944c983210e0"
 
       def install
         if build.head?
@@ -53,7 +53,7 @@ class AirflowCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "726feec84123ad7bee120e89b9bc3fcbdf0e545fa1d3850a68409e46cff5f47f"
+      sha256 "8c1fd6fb2a7d68c0ca0900536296dbda7a65f934984d80db009bbd5e2d57744c"
 
       def install
         if build.head?
@@ -66,7 +66,7 @@ class AirflowCli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/PJGaetan/airflow-cli/releases/download/v0.1.0/airflow-cli_0.1.0_Linux_arm64.tar.gz"
-      sha256 "9f2c3a59f064f1c59a09eb3bef770b20ddef659ccfdee4e2157b157d1a7153b3"
+      sha256 "852d2b1f16f76a4efab04b720498655a8e0cb65305c6f07521d603667eda2422"
 
       def install
         if build.head?
