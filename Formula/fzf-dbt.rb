@@ -12,13 +12,11 @@ class FzfDbt < Formula
   def install
     bin.install "add_zsh_fzf_dbt_profile_safely.sh"
     etc.install "src/fzf_dbt.sh" => "fzf_dbt.sh"
-    system "echo 'FZF_DBT_PATH=~/.fzf-dbt/fzf-dbt.sh' >> ~/.zshrc"
+    # system "echo 'FZF_DBT_PATH=~/.fzf-dbt/fzf-dbt.sh' >> ~/.zshrc"
   end
 
   def post_install
-    sh = bin/"sh"
-    res = Pathname.new(Utils.safe_popen_read(sh, "add_zsh_fzf_dbt_profile_safely.sh")).parent
-    raise "command failed: #{sh} add_zsh_fzf_dbt_profile_safely.sh" if $CHILD_STATUS.exitstatus.nonzero?
+    system "add_zsh_fzf_dbt_profile_safely.sh"
   end
 
   def
