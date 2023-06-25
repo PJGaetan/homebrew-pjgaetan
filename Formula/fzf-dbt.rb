@@ -16,7 +16,9 @@ class FzfDbt < Formula
   end
 
   def post_install
-    system "/bin/sh add_zsh_fzf_dbt_profile_safely.sh"
+    sh = bin/"sh"
+    res = Pathname.new(Utils.safe_popen_read(sh, "add_zsh_fzf_dbt_profile_safely.sh")).parent
+    raise "command failed: #{sh} add_zsh_fzf_dbt_profile_safely.sh" if $CHILD_STATUS.exitstatus.nonzero?
   end
 
   def
