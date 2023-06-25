@@ -16,7 +16,7 @@ class FzfDbt < Formula
   end
 
   def post_install
-    system "#{bin}/sh", "add_zsh_fzf_dbt_profile_safely.sh"
+    system "bin/sh", "add_zsh_fzf_dbt_profile_safely.sh"
   end
 
   def
