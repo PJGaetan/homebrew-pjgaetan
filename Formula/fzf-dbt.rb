@@ -13,7 +13,7 @@ class FzfDbt < Formula
     bin.install "add_zsh_fzf_dbt_profile_safely.sh"
     etc.install "src/fzf_dbt.sh" => "fzf_dbt.sh"
     system "echo 'FZF_DBT_PATH=~/.fzf-dbt/fzf-dbt.sh' >> ~/.zshrc"
-    system "sh", "add_zsh_fzf_dbt_profile_safely.sh"
+    system "/bin/sh", "add_zsh_fzf_dbt_profile_safely.sh"
   end
 
   def
